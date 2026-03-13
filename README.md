@@ -2,7 +2,7 @@
 
 ### One skill to design it, build it, test it, polish it, and ship it.
 
-Shipwright is an AI coding agent skill that covers the **complete software lifecycle** — from a rough idea to a production-ready system built to the engineering standards of Airbnb, Stripe, Meta, and Linear.
+Shipwright is an AI coding agent skill that covers the **complete software lifecycle** — from a rough idea to a production-ready system built to the engineering standards of Airbnb, Stripe, and Meta. 
 
 Drop it into [Claude Code](https://github.com/anthropics/claude-code) or [Cursor](https://cursor.com) and your agent gains the ability to design architecture, implement with TDD, create distinctive frontends, run exhaustive QA across every layer, harden security, optimize performance, and ship with confidence.
 
